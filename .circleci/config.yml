@@ -39,6 +39,12 @@ jobs:
                 command: >
                  sudo gcloud firebase test android run  --type instrumentation  --app app/build/outputs/apk/debug/app-debug.apk  --test app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk --device model=Nexus5X  --timeout 90s
       - run:
+              name: Create directory to store test results
+              command: mkdir firebase
+      - run:
+              name: Download instrumented test results from Firebase Test Lab
+              command: gsutil -m cp -r -U "`gsutil ls gs://test-lab-1pmxii934h5rm-k64t4d64n9nwc | tail -1`*" /root/workspace/firebase/
+      - run:
           name: Run Tests
           command: ./gradlew lint test
       - store_artifacts:
