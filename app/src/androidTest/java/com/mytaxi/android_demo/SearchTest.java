@@ -19,7 +19,7 @@ public class SearchTest extends BaseTest {
 
 
      @Test
-    public void SearchTest1() throws Exception {
+    public void SearchTestDefault() throws Exception {
         applicationManager.getSearchHelper().typeSearchQuery("sa");
         applicationManager.getSearchHelper().pickSearchResultByName("Sarah Scott");
         applicationManager.getDriverHelper().checkDriverIsExpected("Sarah Scott");
@@ -28,8 +28,8 @@ public class SearchTest extends BaseTest {
     }
 
 
-   // @Test
-    public void SearchTest22() throws Exception {
+    @Test
+    public void SearchTestAngelinaRoussel() throws Exception {
         applicationManager.getSearchHelper().typeSearchQuery("an");
         applicationManager.getSearchHelper().pickSearchResultByName("Angelina Roussel");
         applicationManager.getDriverHelper().checkDriverIsExpected("Angelina Roussel");
@@ -37,10 +37,10 @@ public class SearchTest extends BaseTest {
         applicationManager.getDriverHelper().checkDialIntent();
     }
 
-
-  //  @Test
-    public void SearchTest33() throws Exception {
-        applicationManager.getSearchHelper().typeSearchQuery("be");
+    //this test has to fail as SearchQuery is wrong
+    @Test
+    public void SearchTestFail() throws Exception {
+        applicationManager.getSearchHelper().typeSearchQuery("qwerty");
         applicationManager.getSearchHelper().pickSearchResultByName("Benjamin Hart");
         applicationManager.getDriverHelper().checkDriverIsExpected("Benjamin Hart");
         applicationManager.getDriverHelper().callDriver();

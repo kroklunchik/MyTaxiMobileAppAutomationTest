@@ -43,7 +43,10 @@ jobs:
               command: mkdir firebase
       - run:
               name: Download instrumented test results from Firebase Test Lab
-              command: gsutil -m cp -r -U "`gsutil ls gs://test-lab-1pmxii934h5rm-k64t4d64n9nwc | tail -1`*" /root/workspace/firebase/
+              command: |
+                gcloud auth application-default login
+                sudo pip install -U crcmod
+                gsutil -m cp -r -U "`gsutil ls gs://test-lab-1pmxii934h5rm-k64t4d64n9nwc | tail -1`*" /root/workspace/firebase/
       - run:
           name: Run Tests
           command: ./gradlew lint test

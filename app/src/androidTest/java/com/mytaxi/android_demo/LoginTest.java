@@ -12,21 +12,14 @@ import static android.support.test.InstrumentationRegistry.getInstrumentation;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void LoginTest1() throws Exception {
+    public void LoginTestValidCredentials1() throws Exception {
         applicationManager.getAuthenticationHelper().inputUserCredentials();
         applicationManager.getAuthenticationHelper().clickLoginButton();
         applicationManager.getMenuHelper().checkLoginSuccesfull();
     }
 
-   // @Test
-    public void LoginTest22() throws Exception {
-        applicationManager.getAuthenticationHelper().inputUserCredentials();
-        applicationManager.getAuthenticationHelper().clickLoginButton();
-        applicationManager.getMenuHelper().checkLoginSuccesfull();
-    }
-
-  //  @Test
-    public void LoginTest33() throws Exception {
+    @Test
+    public void LoginTestValidCredentias2() throws Exception {
         applicationManager.getAuthenticationHelper().inputUserCredentials();
         applicationManager.getAuthenticationHelper().clickLoginButton();
         applicationManager.getMenuHelper().checkLoginSuccesfull();

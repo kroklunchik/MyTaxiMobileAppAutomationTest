@@ -18,11 +18,13 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 public class BaseTest {
 
     @Rule
-   public IntentsTestRule<MainActivity> mActivityRule = new IntentsTestRule<>(MainActivity.class);
+    public IntentsTestRule<MainActivity> mActivityRule = new IntentsTestRule<>(MainActivity.class);
 
+    //granting permission for the location
     @Rule public GrantPermissionRule permissionRule = GrantPermissionRule.grant(Manifest.permission.ACCESS_FINE_LOCATION);
 
     protected static ApplicationManager applicationManager;
+
 
     @BeforeClass
     public static void  userCreation() throws Exception {
