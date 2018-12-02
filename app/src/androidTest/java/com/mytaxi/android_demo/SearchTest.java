@@ -17,7 +17,8 @@ public class SearchTest extends BaseTest {
         applicationManager.getAuthenticationHelper().clickLoginButton();
     }}
 
-    @Test
+
+     @Test
     public void SearchTest1() throws Exception {
         applicationManager.getSearchHelper().typeSearchQuery("sa");
         applicationManager.getSearchHelper().pickSearchResultByName("Sarah Scott");

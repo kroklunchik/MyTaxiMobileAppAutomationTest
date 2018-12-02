@@ -26,7 +26,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void  userCreation() throws Exception {
-        getInstrumentation().getTargetContext().deleteSharedPreferences("MytaxiPrefs");
+       getInstrumentation().getTargetContext().deleteSharedPreferences("MytaxiPrefs");
         applicationManager = new ApplicationManager();
     }
 
