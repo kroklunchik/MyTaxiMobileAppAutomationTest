@@ -25,6 +25,7 @@ public class LoginTest extends BaseTest {
         applicationManager.getMenuHelper().checkLoginSuccesfull();
     }
 
+    //cleaning settings for the next login test
     @After
     public void tearDown() throws Exception {
         getInstrumentation().getTargetContext().deleteSharedPreferences("MytaxiPrefs");

@@ -48,7 +48,7 @@ public class HttpClient {
         String seed = "23f8827e04239990";
         String url = RANDOM_USER_URL + "?results=" + amount + "&seed=" + seed;
         Request request = new Request.Builder().url(url).build();
-        ////my line
+        //registring idling resource for OkHttp client
         IdlingResources.registerOkHttp(mClient);
 
         mClient.newCall(request).enqueue(new Callback() {
@@ -74,7 +74,7 @@ public class HttpClient {
     public void fetchUser(String seed, final UserCallback userCallback) {
         String url = RANDOM_USER_URL + "?seed=" + seed;
         Request request = new Request.Builder().url(url).build();
-        ////my line
+        //registring idling resource for OkHttp client
         IdlingResources.registerOkHttp(mClient);
 
         mClient.newCall(request).enqueue(new Callback() {

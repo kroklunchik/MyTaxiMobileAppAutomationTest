@@ -25,13 +25,14 @@ public class BaseTest {
 
     protected static ApplicationManager applicationManager;
 
-
+    //cleaning all previous settings, create ApplicationManager
     @BeforeClass
     public static void  userCreation() throws Exception {
        getInstrumentation().getTargetContext().deleteSharedPreferences("MytaxiPrefs");
         applicationManager = new ApplicationManager();
     }
 
+    //method for saving time for Search-tests: in order to avoid endless login-search-cleandata flows we login only if app logged out
     public boolean NotLoggedIn() {
         try {
             onView(withId(R.id.edt_username)).check(matches(isDisplayed())).perform(click());

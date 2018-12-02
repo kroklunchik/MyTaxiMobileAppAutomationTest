@@ -3,7 +3,9 @@ package com.mytaxi.android_demo.helpers;
 import com.mytaxi.android_demo.data.UserCredentials;
 import org.json.JSONException;
 import java.io.IOException;
-
+/************************************************************************************/
+//Stores all needed helpers and UserCredentials
+/************************************************************************************/
 public class ApplicationManager {
     protected static UserCredentials userCredentials;
     private AuthenticationHelper authenticationHelper;

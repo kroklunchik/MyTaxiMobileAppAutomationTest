@@ -10,8 +10,11 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
-
+/************************************************************************************/
+//Helper performs actions on DriverProfile activity
+/************************************************************************************/
 public class DriverHelper extends HelperBase{
+
     public void checkDialIntent() {
         intended(allOf(hasAction(Intent.ACTION_DIAL)));
     }

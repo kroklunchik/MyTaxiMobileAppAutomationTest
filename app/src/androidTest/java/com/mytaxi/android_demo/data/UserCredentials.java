@@ -5,6 +5,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
+/************************************************************************************/
+//Making request to API, converting String to JSON, extracting username and password
+/************************************************************************************/
 
 public class UserCredentials {
     private String username;

@@ -6,6 +6,10 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
+
+/************************************************************************************/
+//Helper performs search actions on Main activity
+/************************************************************************************/
 public class SearchHelper extends HelperBase {
 
     public void pickSearchResultByName(String name) {

@@ -4,6 +4,9 @@ import com.mytaxi.android_demo.R;
 
 import static com.mytaxi.android_demo.helpers.ApplicationManager.userCredentials;
 
+/************************************************************************************/
+//Helper performs actions on Navigation Drawer
+/************************************************************************************/
 public class MenuHelper extends HelperBase {
 
     public void checkLoginSuccesfull() {
