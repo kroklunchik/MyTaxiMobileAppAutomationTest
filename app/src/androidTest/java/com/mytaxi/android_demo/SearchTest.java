@@ -28,7 +28,7 @@ public class SearchTest extends BaseTest {
     }
 
 
-    @Test
+   // @Test
     public void SearchTest22() throws Exception {
         applicationManager.getSearchHelper().typeSearchQuery("an");
         applicationManager.getSearchHelper().pickSearchResultByName("Angelina Roussel");
@@ -38,7 +38,7 @@ public class SearchTest extends BaseTest {
     }
 
 
-    @Test
+  //  @Test
     public void SearchTest33() throws Exception {
         applicationManager.getSearchHelper().typeSearchQuery("be");
         applicationManager.getSearchHelper().pickSearchResultByName("Benjamin Hart");

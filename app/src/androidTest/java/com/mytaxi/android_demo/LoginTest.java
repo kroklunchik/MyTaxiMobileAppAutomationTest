@@ -18,14 +18,14 @@ public class LoginTest extends BaseTest {
         applicationManager.getMenuHelper().checkLoginSuccesfull();
     }
 
-    @Test
+   // @Test
     public void LoginTest22() throws Exception {
         applicationManager.getAuthenticationHelper().inputUserCredentials();
         applicationManager.getAuthenticationHelper().clickLoginButton();
         applicationManager.getMenuHelper().checkLoginSuccesfull();
     }
 
-    @Test
+  //  @Test
     public void LoginTest33() throws Exception {
         applicationManager.getAuthenticationHelper().inputUserCredentials();
         applicationManager.getAuthenticationHelper().clickLoginButton();
