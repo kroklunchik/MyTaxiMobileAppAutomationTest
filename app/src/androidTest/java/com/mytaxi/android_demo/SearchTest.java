@@ -37,14 +37,5 @@ public class SearchTest extends BaseTest {
         applicationManager.getDriverHelper().checkDialIntent();
     }
 
-    //this test has to fail as SearchQuery is wrong
-    @Test
-    public void SearchTestFail() throws Exception {
-        applicationManager.getSearchHelper().typeSearchQuery("qwerty");
-        applicationManager.getSearchHelper().pickSearchResultByName("Benjamin Hart");
-        applicationManager.getDriverHelper().checkDriverIsExpected("Benjamin Hart");
-        applicationManager.getDriverHelper().callDriver();
-        applicationManager.getDriverHelper().checkDialIntent();
-    }
 }
 
