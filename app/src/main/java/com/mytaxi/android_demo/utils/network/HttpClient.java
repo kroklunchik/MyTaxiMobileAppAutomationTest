@@ -48,7 +48,8 @@ public class HttpClient {
         String seed = "23f8827e04239990";
         String url = RANDOM_USER_URL + "?results=" + amount + "&seed=" + seed;
         Request request = new Request.Builder().url(url).build();
-        //registring idling resource for OkHttp client
+        
+        // registring idling resource for OkHttp client
         IdlingResources.registerOkHttp(mClient);
 
         mClient.newCall(request).enqueue(new Callback() {

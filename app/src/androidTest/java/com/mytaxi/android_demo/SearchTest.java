@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public class SearchTest extends BaseTest {
 
-    //login only if application isn't logged in
+    //login only if application is not logged in
     @Before
     public void loginForSearch() throws Exception {
         if(NotLoggedIn()){
